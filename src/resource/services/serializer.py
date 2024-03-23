@@ -1,11 +1,11 @@
 def view_services_serializer(service_data):
- 
+
     if not isinstance(service_data,list):
         service_data=[service_data]
 
-    extra_data=[]
+    sorted_data=[]
     for record in service_data:
-        extra_data.append(
+        sorted_data.append(
             {
                 "id":record.id,
                 "service_name" :record.service_name,
@@ -15,7 +15,7 @@ def view_services_serializer(service_data):
             }
         )
         
-    return extra_data
+    return sorted_data
 
 
 

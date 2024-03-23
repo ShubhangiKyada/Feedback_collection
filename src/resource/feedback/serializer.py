@@ -1,11 +1,11 @@
 def view_feedback_serializer(feedback_data):
- 
+
     if not isinstance(feedback_data,list):
         feedback_data=[feedback_data]
 
-    extra_data=[]
+    sorted_data=[]
     for record in feedback_data:
-        extra_data.append(
+        sorted_data.append(
             {
                 "id":record.id,
                 "feedback" :record.feedback,
@@ -16,4 +16,4 @@ def view_feedback_serializer(feedback_data):
             }
         )
         
-    return extra_data
+    return sorted_data

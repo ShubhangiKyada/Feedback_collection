@@ -3,10 +3,10 @@ def getuser_serializer(users_data):
     if not isinstance(users_data,list):
         users_data=[users_data]
 
-    extra_data=[]
+    sorted_data=[]
 
     for record in users_data:
-        extra_data.append(
+        sorted_data.append(
             {
                 "fname":record.first_name,
                 "lname" :record.last_name,
@@ -19,7 +19,7 @@ def getuser_serializer(users_data):
             }
         )
         
-    return extra_data
+    return sorted_data
 
 #create validator serializer
 
